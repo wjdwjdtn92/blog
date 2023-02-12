@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import variables from './variables';
 
 const GlobalStyles = createGlobalStyle` 
+  ${variables};
+
   *, *:before, *:after {
     box-sizing: border-box;
     padding: 0;
@@ -10,6 +13,10 @@ const GlobalStyles = createGlobalStyle`
   html, body {
     font-size: 16px;
     font-family: 'Karla', sans-serif;
+  }
+
+  body {
+    background-color: var(--background);
   }
 
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -28,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
     outline: none;
+    border: none;
   }
 
   a {
@@ -35,9 +43,6 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
   }
 
-  :root {
-
-  }
 
   #root {
     min-height: 100vh;
